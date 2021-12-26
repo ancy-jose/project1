@@ -1,0 +1,15 @@
+<p>booking works!</p>
+
+
+<div class="row">
+    <div class="col-sm-12" *ngFor="let bookings of BookingList">
+        <div class="card m-4">
+            <div class="card-body">
+                <h5 class="card-title">{{bookings.hotel_Id}}</h5>
+                <p class="card-text">Room Number:{{bookings.room_num}}</p>
+                <p class="card-text"> {{bookings.booking_date}}</p>
+                <a [routerLink]="['/guest/', bookings.booking_Id]" class="btn btn-danger">Confirm Booking</a>
+            </div>
+        </div>
+    </div>
+</div>

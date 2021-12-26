@@ -1,0 +1,41 @@
+<style>
+    table{
+        margin: 70px;
+    }
+    tr{
+        height: 70px;
+    }
+</style>
+<h5 class="card-title">Hotel Id:{{hotel_id}}</h5>
+
+    <div [ngSwitch]="'{{hotel_id}}'"></div>
+    <hr>
+       <div class="table-responsive-lg ">
+        <table class="table "> 
+         <tr>   
+            <th>
+            Room Type
+            </th>
+            <th>
+            Room View
+            </th>
+            <th>
+            Price
+            </th>
+            <th>
+
+            </th>
+        </tr>
+        <tr *ngFor="let room of roomList">
+            <td>{{room.room_type}}</td>
+            <td>{{room.room_view}}</td>
+            <td>{{room.price}}</td>
+            <td> <a [routerLink]="['/booking/', room.room_num]" class="btn btn-outline-success" >Book Now</a></td>
+        </tr>
+    </table>
+</div>
+        <!-- <div class="card m-4">
+                <a [routerLink]="['/booking/', rooms.Num]" class="btn btn-danger">Book Now</a>
+            </div>
+        </div> -->
+   

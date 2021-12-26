@@ -1,0 +1,27 @@
+<style>  
+</style>
+<div class="row">
+    <div class="col-sm-12" *ngFor="let hotel of hotelList">
+        <div class="card m-4">
+            <div class="card-body">
+                <h5 class="card-title">{{hotel.hotel_name}}</h5>
+                <p class="card-text">{{hotel.location}}</p>
+                <p class="card-text">Rating : {{hotel.rating}}</p>
+                <a [routerLink]="['/room/', hotel.hotel_Id]" class="btn btn-danger">Know More</a>
+            </div>
+        </div>
+    </div> 
+</div>
+<!-- </div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let hotel of hotelList">
+            <div class="card col-sm-12">
+                <h5 class="card-title">{{hotel.Name}}</h5>
+                <p class="card-text">{{hotel.Location}}</p>
+                <p class="card-text">Rating : {{hotel.Rating}}</p>
+                <a [routerLink]="['/room/', hotel.id]" class="btn btn-danger">Know More</a>
+            </div>
+        </ng-container>
+    </div>
+</div> -->

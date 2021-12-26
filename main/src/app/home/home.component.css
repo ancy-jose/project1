@@ -1,0 +1,16 @@
+
+.form-control{
+    border-radius: 10px;
+    width: 400px;
+    margin-top: 25px;
+  }
+  h1{
+    margin-top: 300px;
+  }
+  .search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 20%;
+    top:69%;
+    color: black;
+  }
